@@ -146,12 +146,12 @@ class SortingVisualizer
                 checkEvents();
                 array[j + 1] = array[j];
                 visualize(j + 1, i, j);
-                SDL_Delay(DELAY_TIME); // Use consistent delay
+                SDL_Delay(DELAY_TIME);
                 j--;
             }
             array[j + 1] = key;
             visualize(j + 1, i);
-            SDL_Delay(DELAY_TIME); // Use consistent delay
+            SDL_Delay(DELAY_TIME);
         }
         sorting = false;
         if (!shouldStopSorting)
@@ -167,7 +167,7 @@ class SortingVisualizer
         {
             checkEvents();
             visualize(i, j);
-            SDL_Delay(DELAY_TIME); // Use consistent delay
+            SDL_Delay(DELAY_TIME);
 
             if (array[i] <= array[j])
                 temp[k++] = array[i++];
@@ -180,7 +180,7 @@ class SortingVisualizer
             checkEvents();
             visualize(i, -1);
             temp[k++] = array[i++];
-            SDL_Delay(DELAY_TIME); // Use consistent delay
+            SDL_Delay(DELAY_TIME);
         }
 
         while (j <= right && !shouldStopSorting)
@@ -188,14 +188,14 @@ class SortingVisualizer
             checkEvents();
             visualize(j, -1);
             temp[k++] = array[j++];
-            SDL_Delay(DELAY_TIME); // Use consistent delay
+            SDL_Delay(DELAY_TIME);
         }
 
         for (i = 0; i < k && !shouldStopSorting; i++)
         {
             array[left + i] = temp[i];
             visualize(left + i, -1);
-            SDL_Delay(DELAY_TIME); // Use consistent delay
+            SDL_Delay(DELAY_TIME);
         }
     }
 
@@ -228,7 +228,7 @@ class SortingVisualizer
         {
             checkEvents();
             visualize(j, high, i + 1);
-            SDL_Delay(DELAY_TIME); // Use consistent delay
+            SDL_Delay(DELAY_TIME);
 
             if (array[j] <= pivot)
             {
@@ -275,7 +275,7 @@ class SortingVisualizer
         {
             std::swap(array[i], array[largest]);
             visualize(i, largest);
-            SDL_Delay(DELAY_TIME); // Use consistent delay
+            SDL_Delay(DELAY_TIME);
             heapify(n, largest);
         }
     }
@@ -292,7 +292,7 @@ class SortingVisualizer
             checkEvents();
             std::swap(array[0], array[i]);
             visualize(0, i);
-            SDL_Delay(DELAY_TIME); // Use consistent delay
+            SDL_Delay(DELAY_TIME);
             heapify(i, 0);
         }
 
@@ -315,7 +315,7 @@ class SortingVisualizer
                     checkEvents();
                     array[j] = array[j - gap];
                     visualize(j, j - gap, i);
-                    SDL_Delay(DELAY_TIME); // Use consistent delay
+                    SDL_Delay(DELAY_TIME);
                 }
                 array[j] = temp;
             }
@@ -343,7 +343,7 @@ class SortingVisualizer
                 {
                     visualize(j, j + 1);
                 }
-                SDL_Delay(DELAY_TIME); // Use consistent delay
+                SDL_Delay(DELAY_TIME);
             }
         }
         sorting = false;
@@ -365,14 +365,14 @@ class SortingVisualizer
                     minIndex = j;
                 }
                 visualize(j, minIndex, i);
-                SDL_Delay(DELAY_TIME); // Use consistent delay
+                SDL_Delay(DELAY_TIME);
             }
 
             if (!shouldStopSorting && minIndex != i)
             {
                 std::swap(array[minIndex], array[i]);
                 visualize(i, minIndex, i);
-                SDL_Delay(DELAY_TIME * 2); // Slightly longer delay for swaps
+                SDL_Delay(DELAY_TIME * 2);
             }
         }
         sorting = false;
