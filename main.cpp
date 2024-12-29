@@ -495,7 +495,7 @@ void displayMenu()
 {
     std::cout << "\033[2J\033[1;1H";
     std::cout << "+---------------------------------------------------------------+\n";
-    std::cout << "|                   Sorting Visualizer Controls                  |\n";
+    std::cout << "|                  Sorting Visualizer Controls                  |\n";
     std::cout << "+---------------------------------------------------------------+\n";
     std::cout << "| 0 - Generate new array                                        |\n";
     std::cout << "| 1 - Start Selection Sort                                      |\n";
@@ -503,11 +503,11 @@ void displayMenu()
     std::cout << "| 3 - Start Insertion Sort                                      |\n";
     std::cout << "| 4 - Start Merge Sort                                          |\n";
     std::cout << "| 5 - Start Quick Sort                                          |\n";
-    std::cout << "| 6 - Start Heap Sort                                          |\n";
-    std::cout << "| 7 - Start Shell Sort                                         |\n";
+    std::cout << "| 6 - Start Heap Sort                                           |\n";
+    std::cout << "| 7 - Start Shell Sort                                          |\n";
     std::cout << "| q - Return to this menu                                       |\n";
     std::cout << "+---------------------------------------------------------------+\n";
-    std::cout << "| Enter 'R' to run visualizer or 'Q' to quit program           |\n";
+    std::cout << "| Enter 'R' to run visualizer or 'Q' to quit program            |\n";
     std::cout << "+---------------------------------------------------------------+\n\n";
 }
 
